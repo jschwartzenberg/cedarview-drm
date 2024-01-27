@@ -218,7 +218,7 @@ int drm_getclient(struct drm_device *dev, void *data,
 		if (i++ >= idx) {
 			client->auth = pt->authenticated;
 			client->pid = pt->pid;
-			client->uid = pt->uid;
+			client->uid = __kuid_val(pt->uid);
 			client->magic = pt->magic;
 			client->iocs = pt->ioctl_count;
 			mutex_unlock(&dev->struct_mutex);

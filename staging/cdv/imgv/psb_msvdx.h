@@ -730,7 +730,7 @@ struct msvdx_private {
 
 	unsigned int pmstate;
 
-	struct sysfs_dirent *sysfs_pmstate;
+	struct kernfs_node *sysfs_pmstate;
 
 	uint32_t msvdx_current_sequence;
 	uint32_t msvdx_last_sequence;

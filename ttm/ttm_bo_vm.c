@@ -195,7 +195,8 @@ static int ttm_bo_vm_fault(struct vm_area_struct *vma, struct vm_fault *vmf)
 			pfn = page_to_pfn(page);
 		}
 
-		ret = vm_insert_mixed(vma, address, pfn);
+		pfn_t pfns = { pfn };
+		ret = vm_insert_mixed(vma, address, pfns);
 		/*
 		 * Somebody beat us to this PTE or prefaulting to
 		 * an already populated PTE, or prefaulting error.

@@ -900,7 +900,6 @@ int psb_msvdx_init(struct drm_device *dev)
 			DRM_ERROR("MSVDX: could not create sysfs file\n");
 		msvdx_priv->sysfs_pmstate = sysfs_get_dirent(
 			dev->pdev->dev.kobj.sd, 
-			NULL,
 			"msvdx_pmstate");
 	}
 

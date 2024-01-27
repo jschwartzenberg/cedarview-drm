@@ -23,7 +23,6 @@
  */
 #ifdef CONFIG_ACPI
 #include <linux/acpi.h>
-#include <linux/acpi_io.h>
 #endif
 #include "psb_drv.h"
 

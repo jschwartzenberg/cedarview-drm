@@ -114,7 +114,7 @@ int drm_ht_insert_item(struct drm_open_hash *ht, struct drm_hash_item *item)
 		parent = list;
 	}
 	if (parent) {
-		hlist_add_after(parent, &item->head);
+		hlist_add_behind(&item->head, parent);
 	} else {
 		hlist_add_head(&item->head, h_list);
 	}
